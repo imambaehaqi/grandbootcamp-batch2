@@ -1,17 +1,13 @@
 <?php
-	function ganti_kata($kata, $start, $final){
-		$array = str_split($kata, 1);
-		$posisi = strpos($kata, $start);
-		$array[$posisi] = $final;
-
-		$string = '';
-		for($i = 0; $i < count($array); $i++){
-			$string .= $array[$i];
-		}
-		
-		return print $string . '<br>';
-	}
-
-	ganti_kata('Imam', 'a', 'e');
-	ganti_kata('Baehaqi', 'e', 'i');
-	ganti_kata('Maiyos', 'i', 'a');
+function print_abc($col,$row){
+    $x = 0;
+    $abjad = range('a', 'z');
+    for ($i=0; $i < $row; $i++) { 
+        for ($j = 1; $j <= $col; $j++) {
+            echo $abjad[$x].'&nbsp;';  
+            $x++;
+        }
+        echo "<br>";
+    }
+}
+print_abc(3,4);
